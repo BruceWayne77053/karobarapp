@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
       
         {children}</body>
         <br/>
-    <footer>=================The End=================</footer>
+    <footer>================= The End =================</footer>
     </html>
   );
 }
