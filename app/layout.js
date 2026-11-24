@@ -24,20 +24,23 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* <h1> This is the Layout </h1> */}
-        {/* <a href="/">Home</a>  
-        <a href="/about">About</a> */}
-        <header>
-      <nav>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-      </nav>
-      </header>
-      
-        {children}</body>
-        <br/>
-    <footer>================================================================= The End ================================================================</footer>
+        <header className="p-4">
+          <nav className="flex justify-end gap-6">
+            <Link href="/" className="hover:text-green-500">Home</Link>
+            <Link href="/about" className="hover:text-green-500">About</Link>
+            <Link href="/contact" className="hover:text-green-500">Contact</Link>
+          </nav>
+        </header>
+
+        <main className="flex-grow">
+          {children}
+        </main>
+
+        <br />
+        <footer>
+          ================================================================= The End ================================================================
+        </footer>
+      </body>
     </html>
   );
 }
