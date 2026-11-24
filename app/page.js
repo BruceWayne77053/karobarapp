@@ -70,7 +70,7 @@
 // }
 
 
-
+import MainHeading from './components/MainHeading'
 
 
 export default function Home() {
@@ -101,9 +101,9 @@ export default function Home() {
         a.map((i,p)=>{
           return(
             <tr key={p}>
-              <td>{i.id}</td>
-              <td>{i.name}</td>
-              <td>{i.age}</td>
+              <td className="border border-white px-6 py-3">{i.id}</td>
+              <td className="border border-white px-6 py-3">{i.name}</td>
+              <td className="border border-white px-6 py-3">{i.age}</td>
             </tr>
           )
         }
@@ -111,6 +111,7 @@ export default function Home() {
   }
     </table>
     
+    <MainHeading a={10} b={20} />
     </>
   );
 }
