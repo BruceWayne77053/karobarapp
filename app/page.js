@@ -70,48 +70,49 @@
 // }
 
 
-import MainHeading from './components/MainHeading'
-
+import MainHeading from './components/MainHeading';
+import Mybox from './components/Mybox';
 
 export default function Home() {
-  
-  // let a = [10, 20, 30, 40, 50];
   let a = [
-    {"id": 1, "name": "John", "age":50},
-    {"id": 2, "name": "Jane", "age":30},
-    {"id": 3, "name": "Bob", "age":40}
-  ]
+    { id: 1, name: "John", age: 50 },
+    { id: 2, name: "Jane", age: 30 },
+    { id: 3, name: "Bob", age: 40 },
+  ];
 
   return (
     <>
-    <h1 className = "text-3xl text-green-500" >Karobar App</h1>
-    <p> lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    {/* <p>{a}</p> */}
-
-    {/* <ul>
-      {
-        a.map((i)=>{
-          return(<li>{i}</li>)
-        })
-      }
-    </ul> */}
-    
-    <table className="border-2 border-white">
-      {
-        a.map((i,p)=>{
-          return(
-            <tr key={p}>
+      <h1 className="text-3xl text-green-500">Karobar App</h1>
+      <p>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <br/>
+      <table className="border-2 border-white">
+        <thead>
+          <tr>
+            <th className="border border-white px-6 py-3">ID</th>
+            <th className="border border-white px-6 py-3">Name</th>
+            <th className="border border-white px-6 py-3">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {a.map((i) => (
+            <tr key={i.id}>
               <td className="border border-white px-6 py-3">{i.id}</td>
               <td className="border border-white px-6 py-3">{i.name}</td>
               <td className="border border-white px-6 py-3">{i.age}</td>
             </tr>
-          )
-        }
-      )
-  }
-    </table>
-    
-    <MainHeading a={10} b={20} />
+          ))}
+        </tbody>
+      </table>
+
+      <MainHeading a={10} b={20} />
     </>
   );
 }
